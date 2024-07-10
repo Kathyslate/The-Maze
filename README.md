@@ -1,10 +1,39 @@
-3D Maze Creating a 3D maze with raycasting using C and SDL2
+<h1>Maze Creating a 3D maze with raycasting using C and SDL2</h1>
 
-textured_1 Table of Content Purpose Inspiration Data Flow Environment Installation Usage To-Do Challenges Contributing Related Projects Resources Authors License
+## Introduction
 
-Disable textures: ./maze no_tex or ./maze maps/<map_name> no_tex Usage This 3D maze uses raycasting to draw the maze walls, utilizing LodeV's method of using vectors to calculate ray length. By default the maze uses textures but textures can be disabled on execution.
+## Installation
+Clone this repo:
+```bash
+git clone https://github.com/Kathyslate/The-Maze.git
+```
+## Compiling
+This project makes use of gcc and make for the compilation process.
 
-## Controls
+### Windows
+Ensure you have gcc, and make(Can install using chocolatey). Then run the following command:
+
+```bash 
+make
+```
+### Linux
+First make sure SDL is installed. If you haven't install SDL by running ``` make linux_install ```. Then run the following command:
+
+```bash
+make linux 
+```
+to compile.
+
+## Running
+After successfully compiling run the program using following command:
+
+```bash
+./maze
+```
+
+## Usage
+
+### Controls
 ```W``` or ```↑``` : move forward
 
 ```S``` or ```↓``` : move backward
@@ -19,17 +48,21 @@ Disable textures: ./maze no_tex or ./maze maps/<map_name> no_tex Usage This 3D m
 
 ```F``` : toggle fullscreen 
 
-```ESC``` : quit textured_3
+```ESC``` : quit
 
 
+## Contributors
+### Resources
+SDL2 API
+LazyFoo Beginning Game Programming
+Ray-Casting Tutorial For Game Development And Other Purposes by F. Permadi
+LodeV Raycasting Tutorial
+Game Engine Black Book
 
-Clone the project to your own machine Commit changes to your own branch Push your work back up to your fork Submit a Pull request so that I can review your changes NOTE: Be sure to merge the latest from "upstream" before making a pull request!
-
-Resources SDL2 API LazyFoo Beginning Game Programming Ray-Casting Tutorial For Game Development And Other Purposes by F. Permadi LodeV Raycasting Tutorial Game Engine Black Book
-
-
-
-## Authors: 
+### Authors: 
 Satson<@gmail.com>
+
 Mucheru Heru <petermucheru420@gmail.com>
+
 Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com>
+
