@@ -16,5 +16,5 @@ Resources SDL2 API LazyFoo Beginning Game Programming Ray-Casting Tutorial For G
 
 Authors: 
 Satson<@gmail.com>
-Mucheru Heru<@gmail.com>
-Oyetunde mercy omobolaji<mercyoyetunde98@gmail.com>
+Mucheru Heru <petermucheru420@gmail.com>
+Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com>
