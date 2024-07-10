@@ -7,14 +7,20 @@ Disable textures: ./maze no_tex or ./maze maps/<map_name> no_tex Usage This 3D m
 ## Controls
 ```W``` or ```↑``` : move forward
 
+```S``` or ```↓``` : move backward
 
-```S``` or ```↓``` : move backward \n
 ```A``` or ```←``` : rotate camera left 
+
 ```D``` or ```→``` : rotate camera right 
+
 ```Q``` : strafe left 
+
 ```E``` : strafe right 
+
 ```F``` : toggle fullscreen 
+
 ```ESC``` : quit textured_3
+
 
 
 Clone the project to your own machine Commit changes to your own branch Push your work back up to your fork Submit a Pull request so that I can review your changes NOTE: Be sure to merge the latest from "upstream" before making a pull request!
