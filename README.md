@@ -1,4 +1,4 @@
-<center><h1>Maze Creating a 3D maze with raycasting using C and SDL2</h1></center>
+<h1><center>Maze Creating a 3D maze with raycasting using C and SDL2</center></h1>
 
 ## Introduction
 The Maze Project is an immersive game built in C using SDL (Simple DirectMedia Layer). Embark on a journey through intricate mazes, utilizing raycasting for realistic rendering. This project aims to combine learning with interactive gameplay, offering a hands-on experience in game development. Dive in and explore the world of 3D gaming with The Maze Project!
