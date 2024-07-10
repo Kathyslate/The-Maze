@@ -3,6 +3,17 @@
 # Introduction
 The Maze Project is an immersive game built in C using SDL (Simple DirectMedia Layer). Embark on a journey through intricate mazes, utilizing raycasting for realistic rendering. This project aims to combine learning with interactive gameplay, offering a hands-on experience in game development. Dive in and explore the world of 3D gaming with The Maze Project!
 
+# Features
+2D maze exploration
+
+Basic enemy AI
+
+Collision detection
+
+Camera movement
+
+Rain effect for enhanced visual experience
+
 ### Project blogs articles
 Satson <>
 
@@ -11,12 +22,21 @@ MucheruM <https://www.linkedin.com/pulse/portfolio-project-blog-post-creating-ma
 Kathyslate <>
 
 ### Authors:
-Satson<@gmail.com>
+Satson Bamidele Johnson <satsunjohnson@gmail.com>
 
 Mucheru Maina <petermucheru420@gmail.com> <https://www.linkedin.com/in/peter-mucheru-heru/>
 
 Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> 
 
+
+# Requirements
+GNU Make
+
+GCC
+
+SDL2
+
+SDL2_image
 
 
 # Installation
@@ -111,8 +131,41 @@ After successfully compiling run the program using following command:
 ```ESC``` : quit
 
 
+# Source Files
+
+main.c - Entry point of the game
+
+shootweapn.c - Weapon handling
+
+loadTexture.c - Texture rendering functions
+
+input.c -  Quit, define maze map, check input for movement handling
+
+maze.c -  Main.c handling
+
+raycaster.c - Wall rendering and collision
+
+parseMap.c - Collision detection
+
+render.c - Rendering walls, background, weapon parsing
+
+SDL.c - Close texture render & Upadate
+
+rain.c - Rain effect
+
 
 # Contributors
+Fork the repository
+
+Create a new branch (git checkout -b feature-branch)
+
+Commit your changes (git commit -am 'Add new feature')
+
+Push to the branch (git push origin feature-branch)
+
+Create a new Pull Request
+
+
 ### Resources
 SDL2 API
 
