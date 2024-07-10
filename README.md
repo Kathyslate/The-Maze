@@ -1,6 +1,6 @@
 <h1><center>Maze Creating a 3D maze with raycasting using C and SDL2</center></h1>
 
-## Introduction
+# Introduction
 The Maze Project is an immersive game built in C using SDL (Simple DirectMedia Layer). Embark on a journey through intricate mazes, utilizing raycasting for realistic rendering. This project aims to combine learning with interactive gameplay, offering a hands-on experience in game development. Dive in and explore the world of 3D gaming with The Maze Project!
 
 ### Project blogs articles
@@ -18,7 +18,8 @@ Mucheru Maina <petermucheru420@gmail.com> <https://www.linkedin.com/in/peter-muc
 Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> 
 
 
-## Installation
+
+# Installation
 Clone this repo
 ```bash
 git clone https://github.com/Kathyslate/The-Maze.git
@@ -76,19 +77,21 @@ Install SDL2 libraries
 sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev -y
 ```
 
-## Compiling
+# Compiling
 ```bash
 make
 ```
 
-## Running
+
+# Running
 After successfully compiling run the program using following command:
 
 ```bash
 ./maze
 ```
 
-## Usage
+
+# Usage
 
 ### Controls
 ```W``` or ```↑``` : move forward
@@ -108,7 +111,8 @@ After successfully compiling run the program using following command:
 ```ESC``` : quit
 
 
-## Contributors
+
+# Contributors
 ### Resources
 SDL2 API
 
