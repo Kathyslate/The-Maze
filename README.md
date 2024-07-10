@@ -5,8 +5,8 @@ textured_1 Table of Content Purpose Inspiration Data Flow Environment Installati
 Disable textures: ./maze no_tex or ./maze maps/<map_name> no_tex Usage This 3D maze uses raycasting to draw the maze walls, utilizing LodeV's method of using vectors to calculate ray length. By default the maze uses textures but textures can be disabled on execution.
 
 ## Controls
-```W``` or ```↑``` : move forward/n
-```S``` or ```↓``` : move backward/n
+```W``` or ```↑``` : move forward \n
+```S``` or ```↓``` : move backward \n
 ```A``` or ```←``` : rotate camera left 
 ```D``` or ```→``` : rotate camera right 
 ```Q``` : strafe left 
