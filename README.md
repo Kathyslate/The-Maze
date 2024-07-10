@@ -47,7 +47,8 @@ Install SDL2 libraries
 sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev -y
 ```
 Install the X server  to handle graphical display on WSL
-[`src`](https://sourceforge.net/projects/vcxsrv/)
+
+[`Xserver`](https://sourceforge.net/projects/vcxsrv/)
 
 Check environment variables and set DISPLAY manually if configured incorrectly
 ```bash 
