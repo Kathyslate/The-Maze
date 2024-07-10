@@ -5,13 +5,18 @@ The Maze Project is an immersive game built in C using SDL (Simple DirectMedia L
 
 ### Project blogs articles
 Satson <>
+
 MucheruM <https://www.linkedin.com/pulse/portfolio-project-blog-post-creating-maze-game-peter-mucheru-eij0f>
+
 Kathyslate <>
 
 ### Authors:
 Satson<@gmail.com>
+
 Mucheru Maina <petermucheru420@gmail.com> <https://www.linkedin.com/in/peter-mucheru-heru/>
+
 Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> 
+
 
 ## Installation
 Clone this repo
@@ -116,10 +121,4 @@ LodeV Raycasting Tutorial
 
 Game Engine Black Book
 
-### Authors: 
-Satson<@gmail.com>
-
-Mucheru Heru <petermucheru420@gmail.com>
-
-Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com>
 
