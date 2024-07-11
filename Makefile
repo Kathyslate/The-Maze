@@ -22,8 +22,8 @@ SDLFLAGS = `sdl2-config --cflags --libs`
 
 # Compiles executable
 all: $(SRC)
-        $(CC) $(SRC) $(CFLAGS) $(LFLAGS) -o $(NAME) $(SDLFLAGS)
+	$(CC) $(SRC) $(CFLAGS) $(LFLAGS) -o $(NAME) $(SDLFLAGS)
 
 # Remove temporary files and executable
 clean:
-        $(RM) *~ $(NAME)
+	$(RM) *~ $(NAME)
