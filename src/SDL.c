@@ -4,6 +4,10 @@
 SDL_Texture *textures[TEX_COUNT];
 SDL_Texture *untextured[TEX_COUNT];
 weapon_t weapon;
+/* Muzzle flash variables */
+bool muzzleFlashActive = false;
+Uint32 muzzleFlashEndTime = 0;
+SDL_Texture *muzzleFlashTexture = NULL;
 
 
 /**
@@ -35,6 +39,33 @@ bool loadWeapon(const char *file)
     weapon.position.w = 100;
     weapon.position.h = 100;
 
+
+    return true;
+}
+
+/**
+ * loadMuzzleFlash - loads the muzzleflash texture
+ * @file: path to the muzzleflash texture file
+ * Return: True on success, False on failure
+ */
+bool loadMuzzleFlash(const char *file)
+{
+    SDL_Surface *loadedSurface = IMG_Load(file);
+    if (!loadedSurface)
+    {
+        printf("Unable to load image %s! SDL_image Error: %s\n", file, IMG_GetError());
+        return false;
+    }
+
+    muzzleFlashTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
+    SDL_FreeSurface(loadedSurface);
+
+    if (!muzzleFlashTexture)
+    {
+        printf("Unable to create texture from %s! SDL Error: %s\n", file, SDL_GetError());
+        return false;
+    }
+
     return true;
 }
 
@@ -45,45 +76,45 @@ bool loadWeapon(const char *file)
  */
 bool initSDL(void)
 {
-        bool success = true;
+	bool success = true;
 
-        window = NULL;
-        renderer = NULL;
+	window = NULL;
+	renderer = NULL;
 
-        if (SDL_Init(SDL_INIT_VIDEO) < 0)
-        {
-                printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-                success = false;
-        }
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	{
+		printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+		success = false;
+	}
 
-        window = SDL_CreateWindow("Maze-Game", SDL_WINDOWPOS_UNDEFINED,
-                        SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-        if (window == NULL)
-        {
-                printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
-                success = false;
-        }
+	window = SDL_CreateWindow("Maze-Game", SDL_WINDOWPOS_UNDEFINED,
+			SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+	if (window == NULL)
+	{
+		printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
+		success = false;
+	}
 
-        renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-        if (renderer == NULL)
-        {
-                printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
-                success = false;
-        }
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	if (renderer == NULL)
+	{
+		printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
+		success = false;
+	}
 
-        texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888,
-                        SDL_TEXTUREACCESS_STREAMING, SCREEN_WIDTH, SCREEN_HEIGHT);
-        if (texture == NULL)
-        {
-                printf("Texture could not be initialized! SDL_Error: %s\n", SDL_GetError());
-                success = false;
-        }
-        if (!loadWeapon("textures/gun1.png"))
-        {
-                success = false;
-        }
+	texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888,
+			SDL_TEXTUREACCESS_STREAMING, SCREEN_WIDTH, SCREEN_HEIGHT);
+	if (texture == NULL)
+	{
+		printf("Texture could not be initialized! SDL_Error: %s\n", SDL_GetError());
+		success = false;
+	}
+	if (!loadWeapon("textures/gun1.png"))
+	{
+	        success = false;
+	}
 
-        return (success);
+	return (success);
 }
 
 /**
@@ -93,24 +124,24 @@ bool initSDL(void)
  */
 void updateRenderer(bool textured)
 {
-        int x, y; /* loop counters */
+	int x, y; /* loop counters */
 
-        /* draw buffer to renderer */
-        if (textured)
-        {
-                SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * 4);
-                SDL_RenderClear(renderer);
-                SDL_RenderCopy(renderer, texture, NULL, NULL);
+	/* draw buffer to renderer */
+	if (textured)
+	{
+		SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * 4);
+		SDL_RenderClear(renderer);
+		SDL_RenderCopy(renderer, texture, NULL, NULL);
 
-                /* clear buffer */
-                for (x = 0; x < SCREEN_WIDTH; x++)
-                        for (y = 0; y < SCREEN_HEIGHT; y++)
-                            buffer[y][x] = 0;
-        }
+		/* clear buffer */
+		for (x = 0; x < SCREEN_WIDTH; x++)
+			for (y = 0; y < SCREEN_HEIGHT; y++)
+			    buffer[y][x] = 0;
+	}
 
-        /* update screen */
-        SDL_RenderCopy(renderer, weapon.texture, NULL, &weapon.position);
-        SDL_RenderPresent(renderer);
+	/* update screen */
+	SDL_RenderCopy(renderer, weapon.texture, NULL, &weapon.position);
+	SDL_RenderPresent(renderer);
 }
 
 /**
@@ -123,13 +154,13 @@ void closeSDL(void)
     for (int i = 0; i < TEX_COUNT; i++)
     {
         if (textures[i] != NULL)
-        {
+	{
             SDL_DestroyTexture(textures[i]);
             textures[i] = NULL;
         }
 
         if (untextured[i] != NULL)
-        {
+	{
             SDL_DestroyTexture(untextured[i]);
             untextured[i] = NULL;
         }
@@ -140,6 +171,13 @@ void closeSDL(void)
     {
         SDL_DestroyTexture(weapon.texture);
         weapon.texture = NULL;
+    }
+
+     // Free muzzleFlash texture
+    if (muzzleFlashTexture != NULL)
+    {
+        SDL_DestroyTexture(muzzleFlashTexture);
+        muzzleFlashTexture = NULL;
     }
 
     SDL_DestroyTexture(texture);
