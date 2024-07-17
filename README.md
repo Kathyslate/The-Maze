@@ -15,18 +15,18 @@ Camera movement
 Rain effect for enhanced visual experience
 
 ### Project blogs articles
-Satson <>
+Satson <https://medium.com/@satsunjohnson/the-maze-a-3d-game-development-venture-ef4396136283>
 
 MucheruM <https://www.linkedin.com/pulse/portfolio-project-blog-post-creating-maze-game-peter-mucheru-eij0f>
 
-Kathyslate <>
+Kathyslate <https://www.linkedin.com/pulse/my-3d-maze-game-oyetunde-mercy-ok65f>
 
 ### Authors:
-Satson Bamidele Johnson <satsunjohnson@gmail.com>
+Satson Bamidele Johnson <satsunjohnson@gmail.com> <https://www.linkedin.com/in/satson-johnson-03b253153/>
 
 Mucheru Maina <petermucheru420@gmail.com> <https://www.linkedin.com/in/peter-mucheru-heru/>
 
-Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> 
+Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> <https://www.linkedin.com/in/oyetunde-mercy-44b186292?trk=contact-info>
 
 
 # Requirements
