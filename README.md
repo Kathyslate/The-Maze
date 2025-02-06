@@ -29,7 +29,7 @@ Mucheru Maina <petermucheru420@gmail.com> <https://www.linkedin.com/in/peter-muc
 Oyetunde mercy omobolaji <mercyoyetunde98@gmail.com> <https://www.linkedin.com/in/oyetunde-mercy-44b186292?trk=contact-info>
 
 
-# Requirements
+# Requirement
 GNU Make
 
 GCC
