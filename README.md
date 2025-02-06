@@ -87,7 +87,7 @@ export DISPLAY=:0
 sudo apt update && sudo apt upgrade -y
 ```
 
-Install the necessary building essencials like gcc for the C code compilation
+Install the necessary building essencials like gcc for the C code compilations
 ```bash
 sudo apt install build-essential -y
 ```
