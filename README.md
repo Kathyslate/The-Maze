@@ -5,6 +5,9 @@
 ### Introduction
 The Maze Project is an immersive game built in C using SDL (Simple DirectMedia Layer). Embark on a journey through intricate mazes, utilizing raycasting for realistic rendering. This project aims to combine learning with interactive gameplay, offering a hands-on experience in game development. Dive in and explore the world of 3D gaming with The Maze Project!
 
+## Note: 
+This project is still under development. More features and functions are being tested and added over time, and existing features may be revised for improvements.
+
 ## Features
 - 2D maze exploration
 - Basic enemy AI
@@ -128,6 +131,7 @@ After successfully compiling, run the program using the following command:
 - **E** : Strafe right
 - **F** : Toggle fullscreen
 - **ESC** : Quit
+- **SPACE** : Shooting
 
 ## Source Files
 - **main.c** - Entry point of the game
